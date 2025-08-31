@@ -1,0 +1,52 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+
+# Node / React junk files we don't want
+adultcare-frontend/node_modules/
+adultcare-frontend/build/
+adultcare-frontend/dist/
+*.lock
+
+# Environment & secrets
+.env
+.env.local
+.env.development
+.env.production
+core/settings.py
+
+# System
+.DS_Store
+Thumbs.db
