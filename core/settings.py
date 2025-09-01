@@ -66,7 +66,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": config("DB_NAME", default="adultcare"),
         "USER": config("DB_USER", default="adultuser"),
         "PASSWORD": config("DB_PASSWORD", default="StrongLocalPassword123!"),
