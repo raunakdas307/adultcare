@@ -1,12 +1,10 @@
 import React from "react";
 import { useCart } from "../contexts/CartContext";
 import { Cashfree } from "cashfree-pg-sdk-javascript";
-import { useNavigate } from "react-router-dom";
 import API from "../api"; // use our Axios instance
 
 const Checkout = () => {
   const { cart } = useCart();
-  const navigate = useNavigate();
 
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 

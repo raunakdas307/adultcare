@@ -98,11 +98,11 @@ export default function MyBookings() {
 
   // Helpers
   const todayStr = new Date().toISOString().slice(0, 10);
-  const isPast = (dateStr) => dateStr < todayStr;
-  const isUpcoming = (dateStr) => dateStr >= todayStr;
-
+  
   // Filter, search, sort
   const filtered = useMemo(() => {
+  const isPast = (dateStr) => dateStr < todayStr;
+  const isUpcoming = (dateStr) => dateStr >= todayStr;
     let list = bookings.slice();
 
     // Tabs

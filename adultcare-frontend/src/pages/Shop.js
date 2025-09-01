@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   ShoppingBag,
@@ -39,7 +39,7 @@ import walkersImg from '../assets/images/walkers2.jpg';
 import wetwipesImg from '../assets/images/wet wipes2.jpg';
 import wheelchairImg from '../assets/images/whellchair2.jpg';
 
-
+// ✅ Removed useEffect (not needed)
 
 const categories = [
   {
@@ -85,188 +85,32 @@ const categories = [
 ];
 
 const allProducts = [
-  {
-    id: 1,
-    name: 'Adult Diapers (Pant Style)',
-    category: 'Adult Diapers',
-    price: 499,
-    image: AdultDiaperImg
-  },
-  {
-    id: 2,
-    name: 'Disposable Adult Diapers',
-    category: 'Adult Diapers',
-    price: 399,
-    image: disposableImg
-  },
-  {
-    id: 3,
-    name: 'Overnight Long Lasting Pads',
-    category: 'Adult Diapers',
-    price: 349,
-    image: overnightpadsImg
-  },
-  {
-    id: 4,
-    name: 'Wheelchair (Foldable)',
-    category: 'Mobility Aids',
-    price: 7999,
-    image: wheelchairImg
-  },
-  {
-    id: 5,
-    name: 'Walkers',
-    category: 'Mobility Aids',
-    price: 5999,
-    image: walkersImg
-  },
-  {
-    id: 6,
-    name: 'Walking Stick',
-    category: 'Mobility Aids',
-    price: 999,
-    image: stickImg 
-  },
-  {
-    id: 7,
-    name: 'Stretchers',
-    category: 'Mobility Aids',
-    price: 2999,
-    image: stretchersImg
-  },
-  {
-    id: 8,
-    name: 'Glucose Meter',
-    category: 'Medical Equipment',
-    price: 1299,
-    image: glucosemeterImg
-  },
-  {
-    id: 9,
-    name: 'BP Monitor',
-    category: 'Medical Equipment',
-    price: 1899,
-    image: bpmonitorImg
-  },
-  {
-    id: 10,
-    name: 'Oximeter',
-    category: 'Medical Equipment',
-    price: 899,
-    image: oximeterImg
-  },
-  {
-    id: 11,
-    name: 'Thermometer',
-    category: 'Medical Equipment',
-    price: 999,
-    image: thermometerImg
-  },
-  {
-    id: 12,
-    name: 'Orthopedic Pillow',
-    category: 'Comfort Accessories',
-    price: 599,
-    image: orthopedicImg
-  },
-  {
-    id: 13,
-    name: 'Massager',
-    category: 'Comfort Accessories',
-    price: 1899,
-    image: massagerImg
-  },
-  {
-    id: 14,
-    name: 'Electric Blanket',
-    category: 'Comfort Accessories',
-    price: 3899,
-    image: electricblanketImg
-  },
-  {
-    id: 15,
-    name: 'Wet Wipes (Pack of 100)',
-    category: 'Hygiene Products',
-    price: 299,
-    image: wetwipesImg
-  },
-  {
-    id: 16,
-    name: 'Bed Pads',
-    category: 'Hygiene Products',
-    price: 399,
-    image: bedpadsImg
-  },
-  {
-    id: 17,
-    name: 'Anti Rash Cream',
-    category: 'Hygiene Products',
-    price: 149,
-    image: antirashImg
-  },
-  {
-    id: 18,
-    name: 'Protein Supplement (Vanilla)',
-    category: 'Nutritional Supplements',
-    price: 799,
-    image: proteinsupplementImg
-  },
-  {
-    id: 19,
-    name: 'Oats Porridge',
-    category: 'Nutritional Supplements',
-    price: 249,
-    image: porridgeImg
-  },
-  {
-    id: 20,
-    name: 'Multivitamin Tablets (30 days)',
-    category: 'Nutritional Supplements',
-    price: 449,
-    image: multivitaminImg 
-  },
-  {
-    id: 21,
-    name: 'Back Support Belt',
-    category: 'Rehabilitation Aids',
-    price: 999,
-    image: backsupportImg
-  },
-  {
-    id: 22,
-    name: 'Knee Braces',
-    category: 'Rehabilitation Aids',
-    price: 449,
-    image: kneebracesImg
-  },
-  {
-    id: 23,
-    name: 'Compression Stockings',
-    category: 'Rehabilitation Aids',
-    price: 399,
-    image: compressionstockingsImg
-  },
-  {
-    id: 24,
-    name: 'Non Slip Socks',
-    category: 'Daily Use Items',
-    price: 199,
-    image: socksImg
-  },
-  {
-    id: 25,
-    name: 'Heating Pads',
-    category: 'Daily Use Items',
-    price: 249,
-    image: heatingpadsImg
-  },
-  {
-    id: 26,
-    name: 'Vaporizer',
-    category: 'Daily Use Items',
-    price: 899,
-    image: vaporizerImg
-  },
+  { id: 1, name: 'Adult Diapers (Pant Style)', category: 'Adult Diapers', price: 499, image: AdultDiaperImg },
+  { id: 2, name: 'Disposable Adult Diapers', category: 'Adult Diapers', price: 399, image: disposableImg },
+  { id: 3, name: 'Overnight Long Lasting Pads', category: 'Adult Diapers', price: 349, image: overnightpadsImg },
+  { id: 4, name: 'Wheelchair (Foldable)', category: 'Mobility Aids', price: 7999, image: wheelchairImg },
+  { id: 5, name: 'Walkers', category: 'Mobility Aids', price: 5999, image: walkersImg },
+  { id: 6, name: 'Walking Stick', category: 'Mobility Aids', price: 999, image: stickImg },
+  { id: 7, name: 'Stretchers', category: 'Mobility Aids', price: 2999, image: stretchersImg },
+  { id: 8, name: 'Glucose Meter', category: 'Medical Equipment', price: 1299, image: glucosemeterImg },
+  { id: 9, name: 'BP Monitor', category: 'Medical Equipment', price: 1899, image: bpmonitorImg },
+  { id: 10, name: 'Oximeter', category: 'Medical Equipment', price: 899, image: oximeterImg },
+  { id: 11, name: 'Thermometer', category: 'Medical Equipment', price: 999, image: thermometerImg },
+  { id: 12, name: 'Orthopedic Pillow', category: 'Comfort Accessories', price: 599, image: orthopedicImg },
+  { id: 13, name: 'Massager', category: 'Comfort Accessories', price: 1899, image: massagerImg },
+  { id: 14, name: 'Electric Blanket', category: 'Comfort Accessories', price: 3899, image: electricblanketImg },
+  { id: 15, name: 'Wet Wipes (Pack of 100)', category: 'Hygiene Products', price: 299, image: wetwipesImg },
+  { id: 16, name: 'Bed Pads', category: 'Hygiene Products', price: 399, image: bedpadsImg },
+  { id: 17, name: 'Anti Rash Cream', category: 'Hygiene Products', price: 149, image: antirashImg },
+  { id: 18, name: 'Protein Supplement (Vanilla)', category: 'Nutritional Supplements', price: 799, image: proteinsupplementImg },
+  { id: 19, name: 'Oats Porridge', category: 'Nutritional Supplements', price: 249, image: porridgeImg },
+  { id: 20, name: 'Multivitamin Tablets (30 days)', category: 'Nutritional Supplements', price: 449, image: multivitaminImg },
+  { id: 21, name: 'Back Support Belt', category: 'Rehabilitation Aids', price: 999, image: backsupportImg },
+  { id: 22, name: 'Knee Braces', category: 'Rehabilitation Aids', price: 449, image: kneebracesImg },
+  { id: 23, name: 'Compression Stockings', category: 'Rehabilitation Aids', price: 399, image: compressionstockingsImg },
+  { id: 24, name: 'Non Slip Socks', category: 'Daily Use Items', price: 199, image: socksImg },
+  { id: 25, name: 'Heating Pads', category: 'Daily Use Items', price: 249, image: heatingpadsImg },
+  { id: 26, name: 'Vaporizer', category: 'Daily Use Items', price: 899, image: vaporizerImg },
 ];
 
 const Shop = () => {
@@ -277,12 +121,11 @@ const Shop = () => {
     ? allProducts.filter((p) => p.category === selectedCategory)
     : [];
 
-const { addToCart } = useCart();
+  const { addToCart } = useCart();
 
-const handleAddToCart = (product) => {
-  addToCart(product);
-};
-
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -290,6 +133,7 @@ const handleAddToCart = (product) => {
       productSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
   };
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-800 dark:text-white pt-32 pb-20 px-6 md:px-16">
       {/* Header */}
@@ -309,7 +153,7 @@ const handleAddToCart = (product) => {
 
       {/* Category Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      {categories.map((item, index) => (
+        {categories.map((item, index) => (
           <motion.div
             key={index}
             onClick={() => handleCategoryClick(item.title)}
@@ -339,25 +183,20 @@ const handleAddToCart = (product) => {
                 whileHover={{ scale: 1.05 }}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden"
               >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-48 object-cover"
-                />
+                <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
                 <div className="p-4 text-center">
                   <h3 className="text-lg font-bold text-purple-700 mb-2">{product.name}</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-2">₹{product.price}</p>
-                 <button
-                 onClick={() => handleAddToCart(product)}
-                 className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition"
-                >
-                 Add to Cart
-                </button>
- 
+                  <button
+                    onClick={() => handleAddToCart(product)}
+                    className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition"
+                  >
+                    Add to Cart
+                  </button>
                 </div>
               </motion.div>
             ))}
-           </motion.div>
+          </motion.div>
         )}
       </div>
     </div>
@@ -365,4 +204,3 @@ const handleAddToCart = (product) => {
 };
 
 export default Shop;
-
