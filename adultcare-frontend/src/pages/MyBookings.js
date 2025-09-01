@@ -136,7 +136,7 @@ export default function MyBookings() {
     });
 
     return list;
-  }, [bookings, activeTab, search, sortBy, caregiversById]);
+  }, [bookings, activeTab, search, sortBy, caregiversById, todayStr]);
 
   const openCancel = (id) => {
     setToCancel(id);
