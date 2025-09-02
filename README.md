@@ -1,3 +1,6 @@
+LIVE DEPLOYED LINK->  adultcareservicesplatform.netlify.app
+
+
 # 🧑‍⚕️ AdultCare Services Platform
 
 AdultCare Services is a **full-stack web application** that connects families with professional caregivers, nurses, and elder care services.  
